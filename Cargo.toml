@@ -1,0 +1,29 @@
+[package]
+name = "mytemplate"
+version = "0.1.0"
+edition = "2021"
+authors = ["ChimeWu<wujicheng0215@outlook.com>"]
+license = "MIT"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[features]
+async = []
+debug = []
+mock = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+anyhow = "1"
+base64 = "0.22.1"
+futures = "0.3"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+solana-account-decoder = "1.18.23"
+solana-client = "1.18.23"
+solana-sdk = "1.18.23"
+thiserror = "1"
+tokio = { version = "1", features = ["rt", "sync"] }
+url = "2"
